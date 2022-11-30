@@ -1,0 +1,14 @@
+.button-basic, .button-report, .button-submit {
+  border: none;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.button-submit {
+  color: fuchsia;
+  padding: 20px;
+}
+
+.button-report {
+  color: indigo;
+}/*# sourceMappingURL=stle.css.map */

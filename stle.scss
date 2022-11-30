@@ -1,0 +1,14 @@
+.button-basic{
+    border:none;                           
+    text-align:center;
+    padding: 20px 10px;
+}
+.button-submit{                             
+      @extend .button-basic;    
+      color:fuchsia;
+      padding: 20px;
+}
+.button-report{
+    @extend .button-basic;
+    color: indigo;
+}
