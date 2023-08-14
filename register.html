@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER-FORM</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../HTML/register style.css">
+</head>
+<body>
+
+    <video src="../HTML/img/150883 (1080p).mp4" autoplay muted loop></video>
+    <div class="background">
+        <div class="shape">
+            <div class="shape"></div>
+        </div>
+    </div>
+
+
+    <form>
+        <h3>Register Here</h3>
+
+        <label for="Username">Username</label>
+        <input type="text" placeholder="Username" id="usrname" required>
+
+        <label for="Password">Password</label>
+        <input type="text" placeholder="Password" id="password"   required>
+        <label for="Repeat Password">Repeat Password</label>
+        <input type="text" placeholder="Repeat Password" id="Repeat password"   required>
+        <button>Log In</button>
+    </form>
+
+
+    <script>
+        var x = document.getElementById("password");
+
+        if (x.type==="password") {
+            x.type = "text";
+        }
+        else{
+            x.type = "password";
+        }
+
+        var x = document.getElementById("Repeat password");
+
+       if (x.type==="Repeat password") {
+           x.type = "text";
+       }
+       else{
+           x.type = "Repeat password";
+       }
+
+
+</script>
+
+</body>
+</html>
