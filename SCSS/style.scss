@@ -1,0 +1,67 @@
+@use 'base'; // Module exportition
+
+$font-stack : Halvetica,sans-serif;
+$primary-color : #dfc7c7;
+
+h1 {
+    font: 100% $font-stack;
+    color: $primary-color;
+}
+p{
+    background-color: base.$secondary-color;
+    color: white;
+}
+
+// NESTED 
+
+nav{
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    li{display: inline-block;}
+    a{
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none; 
+    }
+    a:hover{
+        color: $primary-color;
+    }
+}
+
+//MIXIN
+
+@mixin theme($theme:DarkGray){
+    background: $theme;
+    color: #fff;
+}
+.info{
+    @include theme;
+}
+.success{
+    @include theme($theme : DarkBlue);
+}
+.alert{
+    @include theme($theme : DarkRed);
+}
+.danger{
+    @include theme($theme : DarkGreen);
+}
+
+// Extended/inheritance
+
+%message-shared{
+    padding: 10px;
+    border: 1px solid #56abc5;
+    border-radius: 10px;
+    outline: none
+}
+.input{
+    @extend %message-shared;
+    background-color: base.$secondary-color;
+    color: $font-stack;
+}
+
+//OPERATORS

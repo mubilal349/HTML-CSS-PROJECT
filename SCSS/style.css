@@ -1,0 +1,63 @@
+body {
+  font: 100% sans-serif;
+  color: #dfc7c7;
+}
+
+h1 {
+  font: 100% Halvetica, sans-serif;
+  color: #dfc7c7;
+}
+
+p {
+  background-color: #dfc7c7;
+  color: white;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #dfc7c7;
+}
+
+.info {
+  background: DarkGray;
+  color: #fff;
+}
+
+.success {
+  background: DarkBlue;
+  color: #fff;
+}
+
+.alert {
+  background: DarkRed;
+  color: #fff;
+}
+
+.danger {
+  background: DarkGreen;
+  color: #fff;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #56abc5;
+  border-radius: 10px;
+  outline: none;
+}
+
+.input {
+  background-color: #dfc7c7;
+  color: Halvetica, sans-serif;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,99 @@
+@use 'loginBase'; //Module exportation
+
+// Variables
+$primary: #4a90e2;
+$background: linear-gradient(135deg, #6dd5fa, #2980b9);
+$text-light: #fff;
+$text-dark: #333;
+
+// Mixins
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// Inheritance / Extended
+%shared-a {
+    text-decoration: none;
+    padding-top: 5px;
+}
+
+// Base Styles
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: $background;
+  height: 100vh;
+  @include center;
+}
+
+// Login Card
+.login-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    color: $primary;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: loginBase.$border-radius;
+    font-size: 1rem;
+    transition: border 0.3s;
+
+    &:focus {
+      border-color: $primary;
+      outline: none;
+    }
+  }
+
+
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    background: $primary;
+    color: $text-light;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: darken($primary, 10%);
+      border-radius: loginBase.$border-radius;
+      box-shadow: loginBase.$box-shadow;
+    }
+  }
+}
+a{
+   @extend %shared-a;
+}
+a:hover{
+    text-decoration: underline;
+    color : loginBase.$color;
+}
+
+// Animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
